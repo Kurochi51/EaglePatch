@@ -1,0 +1,38 @@
+EaglePatchAC2 is an ASI plugin that fixes a number of issues in Assassin's Creed II
+
+Plugin version: 1.1
+
+Features:
+- Improved shadow map size from 1024 to 4096 (only when shadow quality is maxed out in game's settings; can be disabled in ini)
+- Draw distance maxed out for buildings, peds and flags (can be disabled in ini)
+- Enables UPlay bonuses - Auditore Crypt, Altair robes, extra knifes, bonus dye (can be disabled in ini)
+- Added support of all XInput controllers (can be disabled in ini)
+- Added detection of hotplugged controllers (can be disabled in ini)
+- Removed support of DInput controllers (can be disabled in ini)
+- Gamepad and kb/mouse controls work at the same time (read note below)
+- Added ini setting for enabling PS3-like controls
+- Added ini setting to skip intro videos (without having to rename files)
+
+Note: switching controls layout in game settings has no effect anymore, if you didn't use KeyboardMouse2 layout for keyboard, you need to change KeyboardLayout setting in EaglePatchAC2.ini
+
+Installation:
+1. Download Ultimate ASI Loader: https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/v4.68/Ultimate-ASI-Loader.zip
+2. Put dinput8.dll from Ultimate ASI Loader into your Assassin's Creed II directory
+3. In your Assassin's Creed II directory create a folder named scripts
+4. Put EaglePatchAC2.asi and EaglePatchAC2.ini into a newly created scripts folder
+5. Done! You may want to check EaglePatchAC2.ini for any settings you want to enable or disable
+
+Supported game versions:
+- Digital UPlay
+- Retail Akella v1.01
+
+This plugin is using a lightweight win32 patcher by withmorten: https://github.com/withmorten/patcher
+
+Contacts
+Discord server: https://discord.gg/WgAg9ymHbj
+Github: https://github.com/Sergeanur
+Youtube: https://www.youtube.com/Sergeanur
+Help Ukraine: https://bit.ly/3afhuGm
+Support author: https://bit.ly/3sX2oMk
+
+--Serge, 2022-2025

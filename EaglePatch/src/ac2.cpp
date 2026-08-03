@@ -42,6 +42,7 @@ struct sAddresses
 	static uintptr_t _AddHWGraphicObjectInstances_checkIsCharacter_jumpOut;
 	static uintptr_t HackPlayerOptionsSaveData;
 	static uintptr_t ClassSerializer_EndClass;
+	static uintptr_t fpsLimiterSkip;
 };
 
 
@@ -65,6 +66,7 @@ uintptr_t sAddresses::_AddHWGraphicObjectInstances_checkIsCharacter = 0;
 uintptr_t sAddresses::_AddHWGraphicObjectInstances_checkIsCharacter_jumpOut = 0;
 uintptr_t sAddresses::HackPlayerOptionsSaveData = 0;
 uintptr_t sAddresses::ClassSerializer_EndClass = 0;
+uintptr_t sAddresses::fpsLimiterSkip = 0;
 
 int NEEDED_KEYBOARD_SET = 0;
 
@@ -472,6 +474,9 @@ void patch()
 
 	if (get_private_profile_bool("SkipIntroVideos", FALSE))
 		PatchByte(sAddresses::_skipIntroVideos, 0xEB);
+
+	if (get_private_profile_bool("UnlockFPS", TRUE) && sAddresses::fpsLimiterSkip != 0)
+    	PatchByte(sAddresses::fpsLimiterSkip, 0xEB);
 }
 
 void InitAddresses(eExeVersion exeVersion)
@@ -541,6 +546,7 @@ void InitAddresses(eExeVersion exeVersion)
 		sAddresses::_AddHWGraphicObjectInstances_checkIsCharacter_jumpOut = 0x15BFE96;
 		sAddresses::HackPlayerOptionsSaveData = 0xAD4723;
 		sAddresses::ClassSerializer_EndClass = 0x14BEB50;
+		sAddresses::fpsLimiterSkip = 0x015D4E83;
 
 		ac_getNewDescriptor = (void* (__cdecl*)(uint32_t, uint32_t, uint32_t))0x149CAD0;
 		ac_getDeleteDescriptor = (uint32_t(__thiscall*)(void*, void*))0x1466AE0;

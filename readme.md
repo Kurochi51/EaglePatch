@@ -55,7 +55,7 @@ SHA-1: 601475FD5EFA02BBAE80D1C06DFA25A0A1E7FD2F
 
 EaglePatchAC2 is an ASI plugin that fixes a number of issues in Assassin's Creed II
 
-**Plugin version:** 1.1
+**Plugin version:** 1.2
 
 <img src="/assets/EaglePatchAC2.png" alt="EaglePatchAC2">
 
@@ -69,6 +69,7 @@ EaglePatchAC2 is an ASI plugin that fixes a number of issues in Assassin's Creed
 - Gamepad and kb/mouse controls work at the same time (read note below)
 - Added ini setting for enabling PS3-like controls
 - Added ini setting to skip intro videos (without having to rename files)
+- Added ini setting to disable the fps cap (only for the digital version)
 
 Note: switching controls layout in game settings has no effect anymore, if you didn't use KeyboardMouse2 layout for keyboard, you need to change KeyboardLayout setting in EaglePatchAC2.ini
 
